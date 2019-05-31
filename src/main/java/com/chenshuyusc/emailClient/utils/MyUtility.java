@@ -25,9 +25,11 @@ public class MyUtility {
 	 }
 	 
 	 public static List<String> getListFromString(String to) {
-			List<String> stringList = new ArrayList<String>();
-			String[] tos = to.split(";");
-			stringList.addAll(stringList);
-			return stringList;
+         ArrayList<String> arrayList = new ArrayList<>();
+         String[] tos = to.split(";");
+         for (int i = 0; i < tos.length; i++) {
+             arrayList.add(tos[i]);
+         }
+         return arrayList;
 	}
 }

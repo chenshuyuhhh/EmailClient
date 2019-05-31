@@ -111,7 +111,10 @@ public class Mail {
     }
 
     public String getDataString() {
-        String to = stringList.toString();
+        String to = "";
+        for (int i = 0; i < stringList.size(); i++) {
+            to += stringList.get(i) + ";";
+        }
         String result = "From:" + from + "\r\n" + "To:" + to + "\r\n"
                 + "Subject:" + subject + "\r\n" + content + "\r\n";
         return result;
@@ -151,11 +154,14 @@ public class Mail {
 
     @Override
     public String toString() {
-        String str = stringList.toString();
-        return "主题:" + subject + "\r\n" +
-                "来自:" + from + "\r\n" +
+        String to = "";
+        for (int i = 0; i < stringList.size(); i++) {
+            to+= stringList.get(i)+";";
+        }
+        return "主题:"+subject+"\r\n"+
+                "来自:"+from+"\r\n"+
                 "时间:" + time + "\r\n" +
-                "回复:" + str + "\r\n" +
-                "正文:" + content;
+                "回复:"+to+"\r\n"+
+                "正文:"+content;
     }
 }

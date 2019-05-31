@@ -71,7 +71,7 @@ public class LoginFrame {
          */
         userText = new JTextField(20);
         userText.setBounds(100, 20, 165, 25);
-        userText.setText("2468493317@qq.com");
+       // userText.setText("2468493317@qq.com");
         panel.add(userText);
 
         // 输入密码的文本域
@@ -85,7 +85,7 @@ public class LoginFrame {
          */
         passwordText = new JPasswordField(20);
         passwordText.setBounds(100, 50, 165, 25);
-        passwordText.setText("tnxixwwvtvobdjjh");
+      //  passwordText.setText("tnxixwwvtvobdjjh");
         panel.add(passwordText);
 
         // pop
